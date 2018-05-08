@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwClone</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  </head>
+    <body>
+    <header>
+      <%= link_to root_path do %><h1>TWCLONE</h1><% end %>
+    </header>
+    <div id="notice">
+      <% if @twc && @twc.errors %>
+        <% @twc.errors.full_messages.each do |message| %>
+          <p><%= message %></p>
+        <% end %>
+      <% end %>
+      <p><%= flash.now[:notice] %></p>
+    </div>
+    <nav>
+      <ul>
+        <li><%= link_to 'トップ', root_path %> </li>
+        <li><%= link_to '投稿一覧', tw_clones_path %> </li>
+        <li><%= link_to '新規投稿', new_tw_clone_path %> </li>
+        <li><s>ログイン</s> </li>
+      </ul>
+    </nav>
+
+    <%= yield %>
+
+    <footer>5月期生　shimoji kenta</footer>
+  </body>
+</html>

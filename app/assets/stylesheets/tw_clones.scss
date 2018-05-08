@@ -1,0 +1,143 @@
+body{
+  font-size: 1rem;
+  display: grid;
+  margin: 0;
+  min-height: 100vh;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+      "title nav"
+      "notice notice"
+      "main  main"
+      "foot  foot";
+}
+
+header{
+  grid-area: title;
+  background-color: #445566;
+  color: #fff;
+}
+
+header h1{
+  margin: 5px 0 0px 20px;
+  font-family: fantasy;
+  color: #fff;
+}
+
+header a{
+  text-decoration: none;
+}
+
+#notice{
+  grid-area: notice;
+}
+
+#notice p{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  background-color: #e91e63;
+}
+
+nav{
+  grid-area: nav;
+  background-color: #445566;
+  color: #fff;
+}
+
+nav ul{
+  font-size: 0.8rem;  
+  display: flex;
+  list-style: none;
+}
+
+nav li{
+  margin-top: 0.5rem;
+  margin-left: 10px;
+  padding-right: 10px;
+}
+
+nav a{
+  text-decoration: none;
+  color: #fff;
+}
+
+article{
+  grid-area: main;
+}
+
+.main{
+  height: 100%;
+  background: image-url('bird.jpg') ;
+  background-size:cover;
+}
+
+#opa_mask{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: fantasy;
+  background: rgba(255,255,255,0.5);
+}
+
+#opa_mask h1{
+  font-size: 4rem;
+}
+
+#index{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(255,255,255,0.5);
+}
+
+.wrapper ul{
+  font-size: 1rem;
+  color: #fff;
+  list-style: none;
+  background-color: #445566;
+  width: 50vw;
+  margin: 20px 30px;
+  padding: 10px 10px 20px 10px;
+  border-radius: 0.5rem;
+}
+
+.wrapper ul p{
+  margin: 0;
+}
+
+#contribution{
+  display: flex;
+}
+
+#contribution li{
+  font-size: 1rem;
+  padding: 10px 0 10px 10px;
+  margin-top: 10px;
+  width: 90%;
+  color: #000;
+  background: rgba(255,255,255,0.5);
+  word-wrap: break-word;
+}
+
+#contribution li:last-child{
+  width: 10%;
+  margin-left: auto;
+}
+
+// aside{
+//   grid-area: side;
+//   background-color: #98fb98;
+// }
+
+footer{
+  grid-area: foot;
+  background-color: #445566;
+  color: #fff;
+  text-align: center;
+}

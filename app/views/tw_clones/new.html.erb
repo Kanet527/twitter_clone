@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>twitter_clone</title>
+  </head>
+  <body>
+    <article>
+      <div class = "main">
+        <div id="index">
+          <div class = "wrapper">
+            <ul class="new">
+              <p>新規投稿</p>
+              <%= form_with(model: @twc, local: true, url: confirm_tw_clones_path ) do | form| %>
+              <div><%= form.text_area :content %></div>
+              <%= form.submit('投稿する') %>
+            <% end %>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>

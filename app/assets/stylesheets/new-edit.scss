@@ -1,0 +1,27 @@
+.wrapper .new{
+  width: auto;
+  text-align:center;
+  font-size: 1.3rem;
+}
+
+.new textarea{
+  width: 40vw;
+  height: 90px;
+  font-size: 1rem;
+}
+
+.new input{
+  font-size: 1rem;
+}
+
+.new h2{
+  margin: 0 auto;
+}
+
+.new #confirm{
+  color: #000;
+  background :rgba(255,255,255,0.5);
+  width: 40vw;
+  padding: 30px 0;
+  word-wrap: break-word;
+}

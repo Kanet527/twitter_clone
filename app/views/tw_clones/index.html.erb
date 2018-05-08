@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>twitter_clone</title>
+  </head>
+  <body>
+    <article>
+      <div class = "main">
+        <div id="index">
+          <div class= "wrapper"> <!-- 格納用タグ -->
+            <h1>投稿一覧</h1>
+              <% @twcs.each do |twc| %>
+                <ul>
+                  <p><%= twc.updated_at.in_time_zone('Tokyo').strftime('%Y/%D %H:%M:%S') %></p>
+                  <div id="contribution">
+                    <li><%= twc.content %></li>
+                    <li>
+                      <%= link_to edit_tw_clone_path(twc.id) do %>
+                        <i class="fas fa-edit"></i>
+                      <% end %>
+                      <%= link_to tw_clone_path(twc.id),
+                        method: :delete, data: {confirm: "削除しますか？"} do %>
+                        <i class="fas fa-trash-alt"></i>
+                      <% end %>
+                    </li>
+                  </div>
+                </ul>
+              <% end %>
+          </div>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>
